@@ -1,0 +1,16 @@
+{
+	  "name": "application",
+	    "description": "application role",
+	      "json_class": "Chef::Role",
+	        "default_attributes": {
+			    "app-demo": {
+				          "food": "sushi"
+						      }
+			      },
+		  "chef_type": "role",
+		    "run_list": [
+			        "recipe[app_demo]"
+				  ],
+		      "env_run_lists": {
+			        }
+}
