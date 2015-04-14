@@ -14,3 +14,10 @@ end
 service "nginx" do
   action [:enable, :start]
 end
+
+template "/usr/share/nginx/www/index.html" do
+	source "index.html.erb"
+	variables(
+		food: node['app-demo']['food']
+	)
+end
