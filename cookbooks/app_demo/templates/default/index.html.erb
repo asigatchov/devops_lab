@@ -8,6 +8,11 @@ food = <%= @food %>
 
 </P>
 
+<h1>countries:</h1>
+<% @countries.each do |country| %>
+	<a href="/<%=country%>.html"><%=country%></a></br>
+<% end %>
+
 
 </body>
 </html>

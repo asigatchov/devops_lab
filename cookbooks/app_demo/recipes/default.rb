@@ -18,6 +18,20 @@ end
 template "/usr/share/nginx/www/index.html" do
 	source "index.html.erb"
 	variables(
-		food: node['app-demo']['food']
+		food: node['app-demo']['food'],
+		countries: data_bag('countries')
 	)
 end
+
+
+data_bag('countries').each do |country|
+	template "/usr/share/nginx/www/#{country}.html" do
+		source "country.html.erb"
+		variables(
+			country: country,
+			cities: data_bag_item('countries', country)['cities']
+		)
+	end
+end
+
+
