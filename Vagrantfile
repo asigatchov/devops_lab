@@ -8,6 +8,8 @@ Vagrant.configure("2") do |config|
       chef.cookbooks_path = "cookbooks"
       chef.roles_path = "roles"
       chef.data_bags_path = "data_bags"
+      chef.environments_path = "environments"
+      chef.environment = "production"
       chef.add_role "application"
     end
   end
