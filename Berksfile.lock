@@ -1,10 +1,17 @@
 DEPENDENCIES
   app_demo
     path: cookbooks/app_demo
+  nginx
+    git: https://github.com/evilmartians/chef-nginx.git
+    revision: 8bec924df552b0fc9fa2f0a91b2186acd47f1dae
+    tag: v2.2.4
   sysctl (~> 0.6.2)
 
 GRAPH
   app_demo (0.1.0)
+  apt (2.7.0)
+  nginx (2.2.4)
+    apt (>= 0.0.0)
   ohai (2.0.1)
   sysctl (0.6.2)
     ohai (>= 0.0.0)

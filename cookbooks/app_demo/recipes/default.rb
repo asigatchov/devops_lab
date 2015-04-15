@@ -12,6 +12,12 @@ sysctl_param 'fs.file-max' do
 	value node['app-demo']['max-files']
 end
 
+# service
+nginx_site "app_demo" do
+ action :enable
+end
+
+
 package "nginx" do
   action :install
 end

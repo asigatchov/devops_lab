@@ -10,6 +10,8 @@
 		  "chef_type": "role",
 		    "run_list": [
 			        "recipe[sysctl]",
+	                        "recipe[nginx::official-repo]",
+                                "recipe[nginx]",
 			        "recipe[app_demo]"
 				  ],
 		      "env_run_lists": {
