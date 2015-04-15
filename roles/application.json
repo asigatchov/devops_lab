@@ -12,7 +12,7 @@
 			        "recipe[sysctl]",
 	                        "recipe[nginx::official-repo]",
                                 "recipe[nginx]",
-				"recipe[app_demo::update-nginx]",
+//				"recipe[app_demo::update-nginx]",
 			        "recipe[app_demo]"
 				  ],
 		      "env_run_lists": {
