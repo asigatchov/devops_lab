@@ -7,6 +7,11 @@
 # All rights reserved - Do Not Redistribute
 #
 
+
+sysctl_param 'fs.file-max' do
+	value node['app-demo']['max-files']
+end
+
 package "nginx" do
   action :install
 end

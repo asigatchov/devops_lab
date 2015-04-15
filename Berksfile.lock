@@ -1,6 +1,10 @@
 DEPENDENCIES
   app_demo
     path: cookbooks/app_demo
+  sysctl (~> 0.6.2)
 
 GRAPH
   app_demo (0.1.0)
+  ohai (2.0.1)
+  sysctl (0.6.2)
+    ohai (>= 0.0.0)

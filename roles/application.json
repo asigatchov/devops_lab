@@ -9,6 +9,7 @@
 			      },
 		  "chef_type": "role",
 		    "run_list": [
+			        "recipe[sysctl]",
 			        "recipe[app_demo]"
 				  ],
 		      "env_run_lists": {
