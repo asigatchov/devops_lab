@@ -1,0 +1,3 @@
+#!/bin/bash
+rm .vagrant/machines/default/lxc/synced_folders 
+vagrant reload --provision

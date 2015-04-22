@@ -8,6 +8,10 @@
 #
 
 
+include_recipe 'app_demo::database'
+include_recipe 'sysctl'
+include_recipe 'nginx'
+
 sysctl_param 'fs.file-max' do
 	value node['app-demo']['max-files']
 end
