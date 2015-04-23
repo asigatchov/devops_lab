@@ -7,10 +7,17 @@
 # All rights reserved - Do Not Redistribute
 #
 
-
+include_recipe 'apt'
 include_recipe 'app_demo::database'
 include_recipe 'sysctl'
 include_recipe 'nginx'
+
+
+include_recipe 'rvm'
+include_recipe 'rvm::system_install'
+include_recipe 'app_demo::rvm_ruby_2.2'
+
+
 
 sysctl_param 'fs.file-max' do
 	value node['app-demo']['max-files']

@@ -5,18 +5,22 @@ DEPENDENCIES
     git: https://github.com/evilmartians/chef-nginx.git
     revision: 8bec924df552b0fc9fa2f0a91b2186acd47f1dae
     tag: v2.2.4
+  rvm (~> 0.9.2)
   sysctl (~> 0.6.2)
 
 GRAPH
   app_demo (0.1.0)
+    apt (>= 0.0.0)
     database (>= 0.0.0)
     mysql (>= 0.0.0)
     mysql2_chef_gem (>= 0.0.0)
     nginx (>= 0.0.0)
+    rvm (>= 0.0.0)
     sysctl (>= 0.0.0)
   apt (2.7.0)
   build-essential (2.2.3)
   chef-sugar (3.1.0)
+  chef_gem (0.1.0)
   database (4.0.5)
     postgresql (>= 1.0.0)
   mariadb (0.3.0)
@@ -40,6 +44,9 @@ GRAPH
     build-essential (>= 0.0.0)
     openssl (~> 4.0.0)
   rbac (1.0.3)
+  rvm (0.9.2)
+    chef_gem (>= 0.0.0)
+    java (>= 0.0.0)
   smf (2.2.6)
     rbac (>= 1.0.1)
   sysctl (0.6.2)
